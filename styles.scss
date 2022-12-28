@@ -1,0 +1,160 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Variables
+$kindaBrown: #824936;
+$kindaDark: rgb(0 0 0 / .8);
+$allTwos: 36px;
+$white: #fff;
+
+// mixin
+@mixin fontFamilies($main, $fallBack) {
+    font-family: $main, $fallBack;
+    // 'Playfair Display', serif
+    font-family: $main, $fallBack;
+    // 'Roboto', sans-serif
+}
+
+// Object
+$font-weights: (
+    "thin": 300,
+    "bold": 700,
+    "medium": 400
+);
+
+// All images
+img {
+    width: 100%;
+    margin: 0;
+}
+
+// All header twos
+h2 {
+    margin: 0;
+    align-self: flex-start;
+}
+
+header {
+    width: 100%;
+    background-color: #F3EED9;
+
+    .hero-text__container {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       min-height: 660px;
+       gap: 1em;
+       text-align: center;
+
+       .hero-text__small {
+        @include fontFamilies('Roboto', sans-serif);
+        text-transform: uppercase;
+        color: initial;
+        font-weight: 300;
+        letter-spacing: 8px;
+        font-size: 18px;
+       }
+
+       .hero-text__large {
+         font-size: 60px;
+         color: $kindaBrown;
+         @include fontFamilies('Playfair Display', serif);
+         font-weight: 700;
+         width: 70%;
+         line-height: 1em;
+       }
+    }
+}
+
+
+// Resuable styles
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1128px;
+}
+// Resusable fo image sections
+.section__container {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+}
+
+.img_container {
+    img {
+        flex-grow: 1;
+        align-self: flex-start !important;
+
+        width: 100%;
+    }
+}
+
+#main {
+    .first_section  {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 4em 0em 10em; 
+
+        h2 {
+            color: $kindaBrown;
+            font-size: $allTwos;
+            @include fontFamilies('Playfair Display', serif);
+            font-weight: 700;
+            margin-bottom: 0.9em;
+        }
+
+        .first-section__texts  {
+            display: flex;
+
+            .first-section__texts--paragraph  {
+                text-align: left;
+                // width: 50%;
+                font-size: 21px;
+                @include fontFamilies('Roboto', sans-serif);
+                font-weight: map-get($font-weights, "thin");
+                color: $kindaDark;
+            }
+
+            p + p {
+                margin-left: 1em;
+            }
+        }
+    } 
+
+    .section-dark {
+        background-color: #222C2A;
+        padding: 2em 0 6em;
+        min-height: 350px;
+        color: $white;
+
+        h2 {
+            font-size: $allTwos;
+            @include fontFamilies('Playfair Display', serif);
+            // margin: 0;
+        }
+
+        .section-dark__para {
+            // @extend p.first-section__texts--paragraph;
+                text-align: left;
+               width: 80%;
+               font-size: 21px;
+               @include fontFamilies('Roboto', sans-serif);
+               font-weight: map-get($font-weights, "thin");
+               margin-top: 1.5em;
+        }
+    }
+
+   }
+

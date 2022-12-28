@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  align-self: flex-start;
+}
+
+header {
+  width: 100%;
+  background-color: #F3EED9;
+}
+header .hero-text__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 660px;
+  gap: 1em;
+  text-align: center;
+}
+header .hero-text__container .hero-text__small {
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: initial;
+  font-weight: 300;
+  letter-spacing: 8px;
+  font-size: 18px;
+}
+header .hero-text__container .hero-text__large {
+  font-size: 60px;
+  color: #824936;
+  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  width: 70%;
+  line-height: 1em;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1128px;
+}
+
+.section__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img_container img {
+  flex-grow: 1;
+  align-self: flex-start !important;
+  width: 100%;
+}
+
+#main .first_section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 0em 10em;
+}
+#main .first_section h2 {
+  color: #824936;
+  font-size: 36px;
+  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  margin-bottom: 0.9em;
+}
+#main .first_section .first-section__texts {
+  display: flex;
+}
+#main .first_section .first-section__texts .first-section__texts--paragraph {
+  text-align: left;
+  font-size: 21px;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.8);
+}
+#main .first_section .first-section__texts p + p {
+  margin-left: 1em;
+}
+#main .section-dark {
+  background-color: #222C2A;
+  padding: 2em 0 6em;
+  min-height: 350px;
+  color: #fff;
+}
+#main .section-dark h2 {
+  font-size: 36px;
+  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", serif;
+}
+#main .section-dark .section-dark__para {
+  text-align: left;
+  width: 80%;
+  font-size: 21px;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin-top: 1.5em;
+}/*# sourceMappingURL=styles.css.map */
